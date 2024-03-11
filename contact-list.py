@@ -22,9 +22,11 @@ while True:
             show_contacts(contacts=contacts)    
         case "3":
             show_contacts(contacts=contacts)
-            contact_index = input("Digite o numero da contato que deseja atualizar:")
-            contact_new_name = input("Digite o novo nome da contato: ")
-            update_contact_name(contacts, contact_index, contact_new_name)
+            contact_index = input("Digite o numero do contato que deseja atualizar:")
+            contact_new_name = input("Digite o novo nome do contato: ")
+            contact_new_email = input("Digite o novo email do contato: ")
+            contact_new_phone = input("Digite o novo telefone do contato: ")
+            update_contact_name(contacts, contact_index, contact_new_name,contact_new_email, contact_new_phone)
             
         case "4":
             show_contacts(contacts)
