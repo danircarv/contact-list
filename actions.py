@@ -1,6 +1,6 @@
 contacts = []   
-def add_contact(contacts, contact_name):
-    contact = {"name": contact_name, "favorite": False}
+def add_contact(contacts, contact_name, contact_email, contact_phone ):
+    contact = {"name": contact_name,"phone":contact_phone  ,"email": contact_email, "favorite": False}
     contacts.append(contact)
     print(f"Contato {contact_name} foi adicionada com sucesso!")
     return
@@ -8,9 +8,11 @@ def add_contact(contacts, contact_name):
 def show_contacts(contacts):
     print("\nLista de Contatos")
     for index, contact in enumerate(contacts, start=1):
-       status = "✓" if contact["favorite"] else " "
+       status = "♡" if contact["favorite"] else " "
        contact_name = contact["name"]
-       print(f"{index}. [{status}] {contact_name} ")
+       contact_email = contact["email"]
+       contact_phone = contact["phone"]
+       print(f"{index}. {status} {contact_name} email:{contact_email} phone:{contact_phone} ")
     return
     
 def update_contact_name(contacts, contact_index, contact_new_name):
