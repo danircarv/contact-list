@@ -1,4 +1,4 @@
-from actions import contacts, add_contact, show_contacts,update_contact_name, delete_checked_contacts,check_contact
+from actions import contacts, add_contact, show_contacts,update_contact_name, delete_contact,check_contact
 
 while True:
     print("\n Menu do Gerenciador de Lista de contatos:")
@@ -6,7 +6,7 @@ while True:
     print("2. Ver contato")
     print("3. Atualizar contato")
     print("4. Fvoritar contato")
-    print("5. Deletar contatos completadas")
+    print("5. Deletar contatos")
     print("6. Sair ")
 
     choice = input("Digite sua escolha: ")
@@ -34,8 +34,10 @@ while True:
             check_contact(contacts,contact_index )
               
         case "5":
-            delete_checked_contacts(contacts)
             show_contacts(contacts)
+            contact_index = input("Digite o numero do contato que deseja deletar:")
+            delete_contact(contacts, contact_index)
+            
         case "6":
             break
 

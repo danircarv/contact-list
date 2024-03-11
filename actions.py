@@ -33,11 +33,11 @@ def check_contact(contacts, contact_index):
     print(f"Contato {contact_index} marcada como favorito")
     return
 
-def delete_checked_contacts(contacts):
-   
-    for contact in contacts:
-        if contact["favorite"]:
-            contacts.remove(contact)
-            
-    print("Contatos favorites foram deletadas")
+def delete_contact(contacts, contact_index):  # Function name corrected to singular
+    corrected_contact_index = int(contact_index) - 1
+    if 0 <= corrected_contact_index < len(contacts):
+        del contacts[corrected_contact_index]  # Using `del` for efficient deletion
+        print(f"Contato {contact_index} deletado com sucesso")
+    else:
+        print("índice de Contato inválido")
     return
