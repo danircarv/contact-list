@@ -5,7 +5,7 @@ while True:
     print("1. Adicionar contato")
     print("2. Ver contato")
     print("3. Atualizar contato")
-    print("4. Completar contato")
+    print("4. Fvoritar contato")
     print("5. Deletar contatos completadas")
     print("6. Sair ")
 
@@ -30,7 +30,7 @@ while True:
             
         case "4":
             show_contacts(contacts)
-            contact_index = input("Digite o numero da contato que deseja completar: ")
+            contact_index = input("Digite o numero da contato que deseja favoritar: ")
             check_contact(contacts,contact_index )
               
         case "5":

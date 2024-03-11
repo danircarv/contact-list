@@ -30,7 +30,7 @@ def check_contact(contacts, contact_index):
     corrected_contact_index = int(contact_index) - 1
     if corrected_contact_index >= 0 and corrected_contact_index < len(contacts):
         contacts[corrected_contact_index]["favorite"] = True
-    print(f"Contato {corrected_contact_index} marcada como favorite")
+    print(f"Contato {contact_index} marcada como favorito")
     return
 
 def delete_checked_contacts(contacts):
